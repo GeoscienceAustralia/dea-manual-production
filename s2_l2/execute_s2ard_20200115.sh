@@ -9,7 +9,7 @@ OUTPUT='/g/data/if87/datacube/002/S2_MSI_ARD/packaged'
 ENV=$loc/definitive.env
 
 ./execute_s2ard \
-    --project u46 \
+    --project v10 \
     --level1-dir $S2L1DIR \
     --workdir $WORKDIR \
     --logdir $LOGDIR \
