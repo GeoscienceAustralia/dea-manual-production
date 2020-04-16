@@ -2,7 +2,7 @@
 
 loc=$PWD
 RUNDIR='/g/data/v10/work/s2_ard/pbs/level1'
-S2L1DIR='/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2020/2020-01'
+S2L1DIR='/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2020/2020-02'
 LOGDIR='/g/data/v10/work/s2_ard/wagl'
 WORKDIR='/g/data/if87/workdir'
 OUTPUT='/g/data/if87/datacube/002/S2_MSI_ARD/packaged'
