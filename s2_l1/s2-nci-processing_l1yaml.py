@@ -8,7 +8,7 @@ import tempfile
 import zipfile
 import sys
 from xml.etree import ElementTree
-from datetime import datetime
+from datetime import datetime, timedelta
 from os.path import join, basename
 from subprocess import Popen, PIPE, check_output, CalledProcessError
 from pathlib import Path
@@ -339,6 +339,9 @@ def generate_level1(level1_root: Path, output_dir: Path, start_date: datetime,
         os.makedirs(yaml_output_dir, exist_ok=True)
         for i in range(retries):
             try:
+                # This is to avoid skipping due to Dataset creation time being older than start date
+                # Note if the difference is more than 7 days it will still skip
+                start_date = start_date - timedelta(7)
                 if dry_run:
                     click.echo(
                         'Processing: datasets: {}, outdir: {}, checksum: {}, start_date: {}'.format(
@@ -346,6 +349,7 @@ def generate_level1(level1_root: Path, output_dir: Path, start_date: datetime,
                         )
                     )
                 else:
+                    logging.info('Processing archive: %s', str(level1_dataset))
                     _process_datasets(yaml_output_dir, (level1_dataset, ), checksum, start_date)
                 break
             except Exception as e:

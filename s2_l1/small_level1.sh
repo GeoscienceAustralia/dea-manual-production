@@ -21,7 +21,7 @@ PARA="$(($END-$START+1))"
 echo ncpus=$PARA    # set this value in line 10 above!
 for i in $(seq  $START $END);
     # DAY_START DAY_END $INPUT_DIR $OUTPUT_DIR
-    do echo 2020-02-$i 2020-02-$(($i+1)) $INPUT_DIR $OUTPUT_DIR ;
+    do echo 2020-02-$(($i-0)) 2020-02-$(($i+1)) $INPUT_DIR $OUTPUT_DIR ;
 #done | xargs -P$PARA -n 4 ./repeat.sh
 done | xargs -P$PARA -n 4 ./level1.sh
 echo end
