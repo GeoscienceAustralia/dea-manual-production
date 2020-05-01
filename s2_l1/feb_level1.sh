@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #!/bin/bash
-#PBS -P u46
+#PBS -P v10 
 #PBS -W umask=017
 #PBS -q normal
 #PBS -l walltime=4:00:00,mem=145GB,other=pernodejobfs
