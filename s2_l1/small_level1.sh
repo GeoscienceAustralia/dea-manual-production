@@ -12,16 +12,16 @@
 
 
 loc=$PWD
-INPUT_DIR='/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2019/2019-12/65S160E-70S165E/'
+INPUT_DIR='/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2020/2020-02/10S135E-15S140E/'
 OUTPUT_DIR=$loc/yamltestdir
 
-START=26
-END=26
+START=14
+END=14
 PARA="$(($END-$START+1))"
 echo ncpus=$PARA    # set this value in line 10 above!
 for i in $(seq  $START $END);
     # DAY_START DAY_END $INPUT_DIR $OUTPUT_DIR
-    do echo 2019-12-$i 2019-12-$(($i+1)) $INPUT_DIR $OUTPUT_DIR ;
+    do echo 2020-02-$i 2020-02-$(($i+1)) $INPUT_DIR $OUTPUT_DIR ;
 #done | xargs -P$PARA -n 4 ./repeat.sh
 done | xargs -P$PARA -n 4 ./level1.sh
 echo end
