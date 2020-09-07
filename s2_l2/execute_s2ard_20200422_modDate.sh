@@ -15,7 +15,7 @@ ENV=$loc/definitive.env
     --logdir $LOGDIR \
     --output-dir $OUTPUT \
     --copy-parent-dir-count 1 \
-    --file-mod-start  2020-05-15 \
+    --file-mod-start  2020-05-14 \
     --file-mod-end  2020-05-16 \
     --task level2 \
     --rundir $RUNDIR \
