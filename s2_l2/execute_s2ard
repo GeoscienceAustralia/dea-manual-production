@@ -25,6 +25,9 @@ WORK_DIR='/g/data/if87/workdir'
 # Defines PBS resources required to run the find command
 FIND_RESOURCES='walltime=48:00:00,mem=10GB,ncpus=1,storage=gdata/v10+scratch/v10+gdata/if87+gdata/fj7+scratch/fj7'
 
+# Use this when testing/dev in u46
+FIND_RESOURCES='walltime=48:00:00,mem=10GB,ncpus=1,storage=gdata/v10+scratch/v10+gdata/if87+gdata/fj7+scratch/fj7+scratch/u46+gdata/u46'
+
 while [[ $# -gt 0 ]]; do
     key="$1"
     case ${key} in
