@@ -4,7 +4,7 @@
 
 loc=$PWD
 RUNDIR='/g/data/v10/work/s2_ard/pbs/level1'
-S2L1DIR='/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2019/'
+S2L1DIR='/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2021/'
 LOGDIR='/g/data/v10/work/s2_ard/wagl'
 WORKDIR='/g/data/if87/workdir'
 OUTPUT='/g/data/if87/datacube/002/S2_MSI_ARD/packaged'
@@ -16,7 +16,7 @@ TEST=true
 
 if [ "$TEST" = true ] ; then
   echo 'Using test directories'
-  S2L1DIR='/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2019/2019-11/20S125E-25S130E/'
+  S2L1DIR='/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2021/2021-01/20S125E-25S130E/'
   LOGDIR=$loc/logdir/
   RUNDIR=$LOGDIR
   WORKDIR=$loc/workdir/
@@ -32,8 +32,8 @@ fi
     --logdir $LOGDIR \
     --output-dir $OUTPUT \
     --copy-parent-dir-count 1 \
-    --file-mod-start 2019-11-04  \
-    --file-mod-end 2019-11-05  \
+    --file-mod-start 2021-01-27  \
+    --file-mod-end 2021-01-31  \
     --task level2 \
     --rundir $RUNDIR \
     --env  $ENV
