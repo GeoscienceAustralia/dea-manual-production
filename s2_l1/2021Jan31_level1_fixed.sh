@@ -14,6 +14,9 @@
 INPUT_DIR='/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2021/'
 OUTPUT_DIR='/g/data/v10/AGDCv2/indexed_datasets/cophub/s2/s2_l1c_yamls'
 
+INPUT_DIR='/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2021/2021-01/65S160E-70S165E'
+OUTPUT_DIR='/g/data/u46/users/dsg547/sandpit/dea-manual-production/s2_l1/yamltestdir'
+
 INITIAL=2021-01-29 # The first date year-month-day
 ncpus=3 # The number of dates and the ncpus
 
@@ -22,7 +25,7 @@ for i in $(seq $ncpus); do
    START=$(date +%Y-%m-%d -d "$INITIAL + $((i - 1)) day")
    END=$(date +%Y-%m-%d -d "$INITIAL + $i day")
    echo $START $END $INPUT_DIR $OUTPUT_DIR ;
-#done | xargs -P$PARA -n 4 ./repeat.sh
-done | xargs -P$PARA -n 4 ./level1simple.sh
+#done | xargs -P $ncpus -n 4 ./repeat.sh
+done | xargs -P $ncpus -n 4 ./level1simple.sh
 
 echo ncpus=$ncpus    # set this value in line 10 above too!
