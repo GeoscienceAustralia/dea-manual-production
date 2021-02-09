@@ -7,6 +7,7 @@
 #PBS -l walltime=4:00:00,mem=155GB,other=pernodejobfs
 #PBS -l wd
 #PBS -l storage=gdata/v10+scratch/v10+gdata/if87+gdata/fj7+scratch/fj7
+# If testing add this +gdata/u46+scratch/u46
 #PBS -l ncpus=3
 # This value should be $END-$START+1
 # the mem is ncpu * 5 GB
@@ -15,7 +16,7 @@ INPUT_DIR='/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2021/'
 OUTPUT_DIR='/g/data/v10/AGDCv2/indexed_datasets/cophub/s2/s2_l1c_yamls'
 
 INITIAL=2021-01-29 # The first date year-month-day
-ncpus=3 # The number of dates and the ncpus
+ncpus=3 # The number of dates and the ncpus. set this value in line 10 above too!
 
 # Change the above lines, not the below lines
 for i in $(seq $ncpus); do
