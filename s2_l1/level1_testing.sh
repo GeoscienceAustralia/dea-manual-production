@@ -6,7 +6,7 @@
 #PBS -q normal
 #PBS -l walltime=5:00:00,mem=155GB,other=pernodejobfs
 #PBS -l wd
-#PBS -l storage=gdata/u46+scratch/u46+gdata/if87+gdata/fj7+scratch/fj7
+#PBS -l storage=gdata/u46+scratch/u46+gdata/if87+gdata/fj7+scratch/fj7+gdata/v10+scratch/v10
 # If testing add this +gdata/u46+scratch/u46
 #PBS -l ncpus=2
 # This value should be $END-$START+1
