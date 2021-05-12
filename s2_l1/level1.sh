@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WAGL_VERSION='5.3.1-gadi'
+WAGL_VERSION='5.3.2-gadi'
 
 module use /g/data/v10/public/modules/modulefiles
 module use /g/data/v10/private/modules/modulefiles
