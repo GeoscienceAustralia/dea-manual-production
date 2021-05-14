@@ -7,7 +7,7 @@ set -eu
 
 FILE_MOD_END=""
 FILE_MOD_START_OFFSET=""
-WAGL_VERSION='5.3.1-gadi'
+WAGL_VERSION='5.3.2-gadi'
 
 # This is passed in...
 # PBS submit logs are stored in RUN_DIR
