@@ -4,6 +4,7 @@
 pwd_now=$PWD
 cd /g/data/u46/users/dsg547/test_data/s2_yaml_gen/l1_scenes
 cd /g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/
+yamlbase=/g/data/v10/AGDCv2/indexed_datasets/cophub/s2/s2_l1c_yamls
 
 today=$(date -I)
 
@@ -34,10 +35,8 @@ done
 
 echo Indexing datasets from ${dates[@]}
 echo processing
-#find ${dates[@]} -maxdepth 1 -mindepth 1 | sed 's|$|/.zip|' | xargs echo
-#find ${dates[@]}  -maxdepth 2 -mindepth 1 
-#find ${dates[@]}  -maxdepth 2 -mindepth 1  | grep '.zip'
 
+# These are all the zips in the recent months 
 zips=() 
 for dir_struct in ${dates[@]}; do
     while IFS=  read -r -d $'\0'; do
@@ -47,5 +46,11 @@ for dir_struct in ${dates[@]}; do
 done
 
 echo the zips ${zips[@]}
+
+# Lets filter out all the zips that already have yamls
+for zip_struct in  ${zips[@]}; do
+    echo $zip_struct
+done
+
 
 cd $pwd_now
