@@ -8,7 +8,7 @@ cd /g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/
 today=$(date -I)
 
 dates=()
-for i in {0..120}; do
+for i in {0..10}; do
     new_year=$(date -d "$today -$i days" '+%Y')
     new_year_month=$(date -d "$today -$i days" '+%Y-%m')
     value=$new_year/$new_year_month
@@ -36,6 +36,16 @@ echo Indexing datasets from ${dates[@]}
 echo processing
 #find ${dates[@]} -maxdepth 1 -mindepth 1 | sed 's|$|/.zip|' | xargs echo
 #find ${dates[@]}  -maxdepth 2 -mindepth 1 
-find ${dates[@]}  -maxdepth 2 -mindepth 1  | grep '.zip'
+#find ${dates[@]}  -maxdepth 2 -mindepth 1  | grep '.zip'
+
+zips=() 
+for dir_struct in ${dates[@]}; do
+    while IFS=  read -r -d $'\0'; do
+	zips+=("$REPLY")
+    done < <(find $dir_struct  -maxdepth 2 -mindepth 1 -name '*.zip' -print0)
+  #find $dir_struct  -maxdepth 2 -mindepth 1 -name '*.zip'
+done
+
+echo the zips ${zips[@]}
 
 cd $pwd_now
