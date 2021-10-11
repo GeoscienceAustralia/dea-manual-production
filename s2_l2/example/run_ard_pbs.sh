@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Produce an example ARD scene
+# modify s2-granules-subset.txt
+# to select the scene or scenes to process
+
 loc=$PWD
 
 LOGDIR=$loc/logdir
