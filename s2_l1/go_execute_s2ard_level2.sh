@@ -20,6 +20,10 @@ if [ "$TEST" = true ] ; then
   WORKDIR=$loc/workexedir/
   OUTPUT=$loc/pkgexedir/
   ENV=$loc/definitive.env
+
+  mkdir -p $LOGDIR
+  mkdir -p $WORKDIR
+  mkdir -p $OUTPUT
 fi
 
 ./execute_s2ard \
