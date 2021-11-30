@@ -18,7 +18,7 @@ if [ "$TEST" = true ] ; then
 
   pwd
   mkdir -p $LOGDIR
-  mkdir -p $OUTPUT
+  mkdir -p $OUTPUT/20S125E-25S130E
 fi
 
 ./s2-nci-processing_l1yaml.py \
