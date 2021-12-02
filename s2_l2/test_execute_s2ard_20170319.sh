@@ -24,5 +24,3 @@ ENV=$loc/definitive.env
 echo log directory $LOGDIR
 echo output directory  $OUTPUT
 echo input directory  $S2L1DIR
-
-
