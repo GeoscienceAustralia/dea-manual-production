@@ -7,7 +7,7 @@ set -eu
 
 FILE_MOD_END=""
 FILE_MOD_START_OFFSET=""
-WAGL_VERSION='5.3.1-gadi'
+WAGL_VERSION='5.3.1-sentinel2-gadi-l1c-upgrade'
 
 # OBS_YEAR is the observation year to process
 OBS_YEAR=""

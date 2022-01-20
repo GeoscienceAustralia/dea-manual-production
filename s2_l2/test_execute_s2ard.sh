@@ -8,6 +8,10 @@ WORKDIR=$loc/workdir
 OUTPUT=$loc/pkgdir
 ENV=$loc/definitive.env
 
+mkdir -p $LOGDIR
+mkdir -p $WORKDIR
+mkdir -p $OUTPUT
+
 ./execute_s2ard \
     --project u46 \
     --level1-dir $S2L1DIR \
