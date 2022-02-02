@@ -1,6 +1,7 @@
 #!/bin/bash
 
-WAGL_VERSION='5.3.2-gadi'
+# this is an upgrade from 5.3.2-gadi
+WAGL_VERSION='5.3.1-sentinel2-gadi-l1c-upgrade'
 
 module use /g/data/v10/public/modules/modulefiles
 module use /g/data/v10/private/modules/modulefiles
