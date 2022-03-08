@@ -2,10 +2,10 @@
 
 loc=$PWD
 RUNDIR=$loc/logdir
-S2L1DIR='/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2021/2021-10/25S110E-30S115E'
-LOGDIR=$loc/logdir
+S2L1DIR='/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2022/2022-02/15S140E-20S145E/'
+LOGDIR=$loc/logdir_v1
 WORKDIR=$loc/workdir
-OUTPUT=$loc/pkgdir
+OUTPUT=$loc/pkgdir_v1
 ENV=$loc/definitive.env
 
 mkdir -p $LOGDIR
@@ -19,8 +19,8 @@ mkdir -p $OUTPUT
     --logdir $LOGDIR \
     --output-dir $OUTPUT \
     --copy-parent-dir-count 1 \
-    --file-mod-start  2021-10-22 \
-    --file-mod-end  2021-10-24 \
+    --file-mod-start  2022-02-26 \
+    --file-mod-end  2022-02-27 \
     --task level2 \
     --rundir $RUNDIR \
     --env  $ENV
