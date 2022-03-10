@@ -1,11 +1,11 @@
 #!/bin/bash
 
 loc=$PWD
-RUNDIR=$loc/logdir
 S2L1DIR='/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2022/2022-02/15S140E-20S145E/'
-LOGDIR=$loc/logdir_v1
+LOGDIR=$loc/logdir
 WORKDIR=$loc/workdir
-OUTPUT=$loc/pkgdir_v1
+OUTPUT=$loc/pkgdir
+RUNDIR=$LOGDIR
 ENV=$loc/definitive.env
 
 mkdir -p $LOGDIR
