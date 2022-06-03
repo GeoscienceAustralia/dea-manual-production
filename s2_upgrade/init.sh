@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+set -e
 
 
 if [[ $HOSTNAME == *"gadi"* ]]; then
@@ -19,7 +19,7 @@ datacube $ODCCONF system check
 
 
 # Defining S2 l1's
-datacube $ODCCONF metadata add https://raw.githubusercontent.com/GeoscienceAustralia/digitalearthau/develop/digitalearthau/config/eo3/eo3_sentinel.odc-type.yaml
+#datacube $ODCCONF metadata add https://raw.githubusercontent.com/GeoscienceAustralia/digitalearthau/develop/digitalearthau/config/eo3/eo3_sentinel.odc-type.yaml
 datacube $ODCCONF product add https://raw.githubusercontent.com/GeoscienceAustralia/digitalearthau/develop/digitalearthau/config/eo3/products/l1_s2a.odc-product.yaml
 datacube $ODCCONF product add https://raw.githubusercontent.com/GeoscienceAustralia/digitalearthau/develop/digitalearthau/config/eo3/products/l1_s2b.odc-product.yaml
 
