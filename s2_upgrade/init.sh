@@ -13,7 +13,7 @@ else
   echo "not NCI"
 fi
 
-ODCCONF="--config pipeline_test.conf"
+ODCCONF=""
 
 datacube $ODCCONF system check
 
