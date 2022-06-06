@@ -35,14 +35,14 @@ beforemonth="2022-01"
 
 # inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2022/2022-01/25S135E-30S140E"
 config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
-dry_run="--dry-run "
+#dry_run="--dry-run "
 
 index=" "
 
 # dsg547
 project="u46"
 base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline"
-yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml/"
+yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_yaml_53JQK/"
 
 # #*/ The end of the sed removed block of code
 
