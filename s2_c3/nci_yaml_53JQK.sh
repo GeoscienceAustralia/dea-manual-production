@@ -11,7 +11,7 @@ dry_run=" "
 index="--index "
 
 #Safety. Remove to generate into production.
-index=" "
+#index=" "
 #dry_run="--dry-run "
 
 project="v10"
@@ -34,10 +34,11 @@ beforemonth="2022-01"
 # mv ../nci_yaml_53JQK.sh s2_c3/nci_yaml_53JQK.sh
 
 # inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2022/2022-01/25S135E-30S140E"
-config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
-#dry_run="--dry-run "
+#config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
+config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/dsg547_dev.conf"
 
-index=" "
+#dry_run="--dry-run "
+#index=" "
 
 # dsg547
 project="u46"
