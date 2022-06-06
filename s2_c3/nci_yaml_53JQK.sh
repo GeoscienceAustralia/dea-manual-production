@@ -12,7 +12,7 @@ index="--index "
 
 #Safety. Remove to generate into production.
 index=" "
-dry_run="--dry-run "
+#dry_run="--dry-run "
 
 project="v10"
 base_dir="/g/data/v10/work/s2_c3_ard/"
