@@ -2,7 +2,6 @@
 
 # Back-processing script for one month and one region
 
-#queue="express" # These can take a while, so don't
 queue="normal"
 ncpus="4 "
 config_arg=" "
@@ -11,7 +10,7 @@ inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 dry_run=" "
 index="--index "
 
-#Safety. Remove to generate into production. 
+#Safety. Remove to generate into production.
 index=" "
 dry_run="--dry-run "
 
