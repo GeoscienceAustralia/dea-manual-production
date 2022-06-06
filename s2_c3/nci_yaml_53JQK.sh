@@ -51,7 +51,7 @@ mkdir -p $base_dir/logdir
 qsub -N nci_yaml_job \
      -q  $queue  \
      -W umask=33 \
-     -l wd,walltime=4:00:00,mem=15GB,ncpus=$ncpus -m abe \
+     -l wd,walltime=2:00:00,mem=15GB,ncpus=$ncpus -m abe \
      -l storage=gdata/v10+scratch/v10+gdata/if87+gdata/fj7+scratch/fj7+gdata/u46 \
      -P  $project -o $base_dir/logdir -e  $base_dir/logdir  \
      -- /bin/bash -l -c \
