@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-# Back-processing script for one month and one region
+# s2 l1 Metadata and indexing back-processing script
+# for one month and one region
 
 queue="normal"
 ncpus="4 "
