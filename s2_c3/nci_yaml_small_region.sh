@@ -48,7 +48,7 @@ base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline"
 
 # Keeping this so the ARD will work.
 yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
-mkdir -p yamdir
+mkdir -p $yamdir
 
 # #*/ The end of the sed removed block of code
 
