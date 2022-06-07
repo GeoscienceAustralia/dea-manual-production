@@ -35,8 +35,8 @@ beforemonth="2022-01"
 # mv ../nci_yaml_53JQK.sh s2_c3/nci_yaml_53JQK.sh
 
 # inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2022/2022-01/25S135E-30S140E"
-#config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
-config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/dsg547_dev.conf"
+config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
+#config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/dsg547_dev.conf"
 
 #dry_run="--dry-run "
 #index=" "
@@ -44,7 +44,7 @@ config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/
 # dsg547
 project="u46"
 base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline"
-yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_yaml_53JQK/"
+yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
 
 # #*/ The end of the sed removed block of code
 
