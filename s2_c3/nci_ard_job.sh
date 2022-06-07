@@ -8,10 +8,13 @@ wagl_env="/g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/
 
 project="v10"
 base_dir="/g/data/v10/work/s2_c3_ard/"
-yamdir="/g/data/ka08/ga/l1c_metadata"
+yamdir=" --yamls-dir /g/data/ka08/ga/l1c_metadata"
+config_arg=" "
+scene_limit="--scene-limit 6000"
 
 run_ard_arg="--run-ard"
 index_arg="--index-datacube-env /g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/index-datacube.env"
+
 
 module_ass="ard-scene-select-py3-dea/20220516"
 
@@ -30,8 +33,9 @@ pkgdir=$base_dir/pkgdir
 # dsg547
 project="u46"
 base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline"
-yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_yaml_53JQK/"
-config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
+yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_yaml_53JQK/"
+#config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
+config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/dsg547_dev.conf"
 
 # Index ARD into pipeline_test
 index_arg="--index-datacube-env /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/index-test-odc.env"
