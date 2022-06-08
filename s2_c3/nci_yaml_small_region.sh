@@ -5,9 +5,9 @@ set -x
 # for one month and one region
 
 queue="normal"
-ncpus="40 "
+ncpus="48 "
 config_arg=" "
-module_ass="eodatasets3/0.28.1"
+module="eodatasets3/0.28.2"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 dry_run=" "
 index="--index "
@@ -63,7 +63,7 @@ qsub -N nci_yaml_job \
      -- /bin/bash -l -c \
      "module use /g/data/v10/public/modules/modulefiles/; \
 module use /g/data/v10/private/modules/modulefiles/; \
-module load $module_ass; \
+module load $module; \
 set -x; \
 eo3-prepare sentinel-l1  \
 --verbose \
