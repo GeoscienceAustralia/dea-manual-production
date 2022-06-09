@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
+set -x
 
 # s2 l1 Metadata and indexing back-processing script
 # for one month and one region
 
 queue="normal"
-ncpus="4 "
+ncpus="40 "
 config_arg=" "
 module_ass="eodatasets3/0.28.1"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
@@ -20,7 +21,7 @@ base_dir="/g/data/v10/work/s2_c3_ard/"
 yamdir="/g/data/ka08/ga/l1c_metadata"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
-aoi=$SCRIPT_DIR/"53JQK.txt"
+aoi=$SCRIPT_DIR/"regions_25S135E-30S140E_only.txt"
 
 aftermonth="2022-01"
 beforemonth="2022-01"
@@ -35,7 +36,7 @@ mkdir -p $base_dir/logdir
 qsub -N nci_yaml_job \
      -q  $queue  \
      -W umask=33 \
-     -l wd,walltime=2:00:00,mem=15GB,ncpus=$ncpus -m abe \
+     -l wd,walltime=0:40:00,mem=100GB,ncpus=$ncpus -m abe \
      -l storage=gdata/v10+scratch/v10+gdata/if87+gdata/fj7+scratch/fj7+gdata/u46 \
      -P  $project -o $base_dir/logdir -e  $base_dir/logdir  \
      -- /bin/bash -l -c \
