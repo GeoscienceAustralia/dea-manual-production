@@ -4,7 +4,7 @@
 # for one month and one region
 
 queue="normal"
-ncpus="4 "
+ncpus="40 "
 config_arg=" "
 module="eodatasets3/0.28.2"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
@@ -25,6 +25,8 @@ aoi=$SCRIPT_DIR/"53JQK.txt"
 aftermonth="2022-01"
 beforemonth="2022-01"
 
+verbose=" "
+
 # Having the info above as variables and some empty values
 # means I can easily test by adding some test code here
 # without modifying the code below.
@@ -40,6 +42,7 @@ config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/
 
 #dry_run="--dry-run "
 #index=" "
+#verbose="--verbose "
 
 # dsg547
 project="u46"
@@ -53,7 +56,7 @@ mkdir -p $base_dir/logdir
 qsub -N nci_yaml_job \
      -q  $queue  \
      -W umask=33 \
-     -l wd,walltime=2:00:00,mem=15GB,ncpus=$ncpus -m abe \
+     -l wd,walltime=0:30:00,mem=100GB,ncpus=$ncpus -m abe \
      -l storage=gdata/v10+scratch/v10+gdata/if87+gdata/fj7+scratch/fj7+gdata/u46 \
      -P  $project -o $base_dir/logdir -e  $base_dir/logdir  \
      -- /bin/bash -l -c \
@@ -62,7 +65,7 @@ module use /g/data/v10/private/modules/modulefiles/; \
 module load $module; \
 set -x; \
 eo3-prepare sentinel-l1  \
---verbose \
+$verbose \
 --jobs $ncpus  \
 --after-month $aftermonth \
 --before-month $beforemonth \

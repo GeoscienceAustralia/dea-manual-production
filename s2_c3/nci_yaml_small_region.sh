@@ -25,6 +25,7 @@ aoi=$SCRIPT_DIR/"regions_25S135E-30S140E_only.txt"
 
 aftermonth="2022-01"
 beforemonth="2022-01"
+verbose=" "
 
 # Having the info above as variables and some empty values
 # means I can easily test by adding some test code here
@@ -41,6 +42,7 @@ config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/
 
 dry_run=" "
 index="--index "
+#verbose="--verbose "
 
 # dsg547
 project="u46"
@@ -66,7 +68,7 @@ module use /g/data/v10/private/modules/modulefiles/; \
 module load $module; \
 set -x; \
 eo3-prepare sentinel-l1  \
---verbose \
+$verbose \
 --jobs $ncpus  \
 --after-month $aftermonth \
 --before-month $beforemonth \
