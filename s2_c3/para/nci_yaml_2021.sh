@@ -5,7 +5,10 @@ set -x
 # for one month and one region
 
 queue="normal"
-ncpus="1 "
+ncpus="48 "
+mem="150GB"
+walltime="08:00:00"
+
 config_arg=" "
 module="eodatasets3/0.28.1"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
@@ -36,17 +39,32 @@ months=(01 02 03 04 05 06 07 08 09 10 11 12)
 # sed '/#\/\*/,/#\*\// d' s2_c3/nci_yaml_small_region.sh > ../nci_yaml_small_region.sh
 # mv ../nci_yaml_small_region.sh s2_c3/nci_yaml_small_region.sh
 
-inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2021/"
+#inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2021/"
 config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
 #config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/dsg547_dev.conf"
 
-dry_run=" "
-index="--index "
-#verbose="--verbose "
+# run ['dry'|'actual']
+run='dry'
+run='actual'
+if [ "$run" = "actual" ]; then
+   dry_run=" "
+   index="--index "
+   ncpus="48 "
+   mem="150GB"
+   months=(07)
+   walltime="08:00:00"
+else
+   dry_run="--dry-run "
+   index=" "
+   ncpus="1 "
+   mem="20GB"
+   months=(01)
+   months=(02 03 04 05 06 07 08 09 10 11 12)
+   walltime="00:10:00"
+fi
 
-months=(01 02)
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
-aoi=$SCRIPT_DIR/"53JQK.txt"
+#SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
+#aoi=$SCRIPT_DIR/"53JQK.txt"
 
 # dsg547
 project="u46"
@@ -64,7 +82,7 @@ for month in "${months[@]}"; do
 qsub -N nci_yaml_job \
      -q  $queue  \
      -W umask=33 \
-     -l wd,walltime=3:40:00,mem=10GB,ncpus=$ncpus -m abe \
+     -l wd,walltime=$walltime,mem=$mem,ncpus=$ncpus -m abe \
      -l storage=gdata/v10+scratch/v10+gdata/if87+gdata/fj7+scratch/fj7+gdata/u46 \
      -P  $project -o $base_dir/logdir -e  $base_dir/logdir  \
      -- /bin/bash -l -c \
