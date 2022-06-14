@@ -6,7 +6,7 @@ set -x
 
 queue="normal"
 ncpus="48 "
-mem="150GB"
+mem="192GB"
 walltime="08:00:00"
 
 config_arg=" "
@@ -49,8 +49,6 @@ run='actual'
 if [ "$run" = "actual" ]; then
    dry_run=" "
    index="--index "
-   ncpus="48 "
-   mem="150GB"
    months=(07)
    walltime="08:00:00"
 else
