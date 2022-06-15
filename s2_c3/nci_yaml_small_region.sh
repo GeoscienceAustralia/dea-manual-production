@@ -7,7 +7,7 @@ set -x
 queue="normal"
 ncpus="48 "
 config_arg=" "
-module="eodatasets3/0.28.2"
+module="eodatasets3/0.28.1"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 dry_run=" "
 index="--index "
@@ -36,9 +36,8 @@ verbose=" "
 # sed '/#\/\*/,/#\*\// d' s2_c3/nci_yaml_small_region.sh > ../nci_yaml_small_region.sh
 # mv ../nci_yaml_small_region.sh s2_c3/nci_yaml_small_region.sh
 
-# inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2022/2022-01/25S135E-30S140E"
-config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
-#config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/dsg547_dev.conf"
+#config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
+config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/dsg547_dev.conf"
 
 dry_run=" "
 index="--index "
@@ -50,6 +49,7 @@ base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline"
 
 # Keeping this so the ARD will work.
 yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
+yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod_small/"
 mkdir -p $yamdir
 
 # #*/ The end of the sed removed block of code

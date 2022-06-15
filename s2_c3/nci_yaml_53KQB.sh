@@ -4,9 +4,9 @@
 # for one month and one region
 
 queue="normal"
-ncpus="40 "
+ncpus="1 "
 config_arg=" "
-module="eodatasets3/0.28.2"
+module="eodatasets3/0.28.1"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 dry_run=" "
 index="--index "
@@ -41,8 +41,10 @@ verbose=" "
 config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/dsg547_dev.conf"
 
 #dry_run="--dry-run "
+dry_run=" "
+
 #index=" "
-#verbose="--verbose "
+index="--index "
 
 # dsg547
 project="u46"
