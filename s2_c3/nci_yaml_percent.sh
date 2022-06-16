@@ -7,7 +7,7 @@ set -x
 queue="normal"
 ncpus="48 "
 config_arg=" "
-module="eodatasets3/0.28.1"
+module="eodatasets3/0.28.3"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 dry_run=" "
 index="--index "
@@ -21,7 +21,7 @@ base_dir="/g/data/v10/work/s2_c3_ard/"
 yamdir="/g/data/ka08/ga/l1c_metadata"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
-aoi=$SCRIPT_DIR/"regions/ozs2_split.txt.00"
+aoi=$SCRIPT_DIR/"regions/ozs2_split.txt.06"
 
 
 aftermonth="2021-01"
@@ -38,11 +38,11 @@ verbose=" "
 # mv ../nci_yaml_small_region.sh s2_c3/nci_yaml_small_region.sh
 
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2021/"
-config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
-#config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/dsg547_dev.conf"
+#config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
+config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/dsg547_dev.conf"
 
 dry_run=" "
-#index="--index "
+index="--index "
 #verbose="--verbose "
 
 # dsg547
@@ -59,7 +59,7 @@ mkdir -p $base_dir/logdir
 qsub -N nci_yaml_job \
      -q  $queue  \
      -W umask=33 \
-     -l wd,walltime=1:40:00,mem=192GB,ncpus=$ncpus -m abe \
+     -l wd,walltime=1:00:00,mem=100GB,ncpus=$ncpus -m abe \
      -l storage=gdata/v10+scratch/v10+gdata/if87+gdata/fj7+scratch/fj7+gdata/u46 \
      -P  $project -o $base_dir/logdir -e  $base_dir/logdir  \
      -- /bin/bash -l -c \
