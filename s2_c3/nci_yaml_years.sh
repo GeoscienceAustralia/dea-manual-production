@@ -62,7 +62,7 @@ else
 fi
 
 #SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
-#aoi=$SCRIPT_DIR/"53JQK.txt"
+#aoi=$SCRIPT_DIR/"53KQB.txt"
 
 # dsg547
 project="u46"
