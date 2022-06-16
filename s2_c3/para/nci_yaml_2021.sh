@@ -7,10 +7,10 @@ set -x
 queue="normal"
 ncpus="48 "
 mem="192GB"
-walltime="08:00:00"
+walltime="09:00:00"
 
 config_arg=" "
-module="eodatasets3/0.28.1"
+module="eodatasets3/0.28.3"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 dry_run=" "
 index="--index "
@@ -50,7 +50,6 @@ if [ "$run" = "actual" ]; then
    dry_run=" "
    index="--index "
    months=(07)
-   walltime="08:00:00"
 else
    dry_run="--dry-run "
    index=" "

@@ -49,7 +49,8 @@ index="--index "
 # dsg547
 project="u46"
 base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline"
-yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_53KQB/"
+#yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_53KQB/"
+yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
 mkdir -p $yamdir
 # #*/ The end of the sed removed block of code
 

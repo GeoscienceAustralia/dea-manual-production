@@ -49,7 +49,7 @@ base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline"
 
 # Keeping this so the ARD will work.
 yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
-yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod_small/"
+#yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod_small/"
 mkdir -p $yamdir
 
 # #*/ The end of the sed removed block of code
@@ -59,7 +59,7 @@ mkdir -p $base_dir/logdir
 qsub -N nci_yaml_job \
      -q  $queue  \
      -W umask=33 \
-     -l wd,walltime=0:40:00,mem=100GB,ncpus=$ncpus -m abe \
+     -l wd,walltime=0:40:00,mem=192GB,ncpus=$ncpus -m abe \
      -l storage=gdata/v10+scratch/v10+gdata/if87+gdata/fj7+scratch/fj7+gdata/u46 \
      -P  $project -o $base_dir/logdir -e  $base_dir/logdir  \
      -- /bin/bash -l -c \

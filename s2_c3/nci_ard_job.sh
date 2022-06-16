@@ -34,15 +34,15 @@ pkgdir=$base_dir/pkgdir
 project="u46"
 base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline"
 
-yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_53KQB/"
-yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod_small/"
-#yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
+#yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_53KQB/"
+#yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod_small/"
+yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
 
 #config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
 config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/dsg547_dev.conf"
 
 # Index ARD into pipeline_test
-index_arg="--index-datacube-env /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/index-test-odc.env"
+index_arg="--index-datacube-env /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/index-dsg547_dev.env"
 
 scene_limit="--scene-limit 600"
 
