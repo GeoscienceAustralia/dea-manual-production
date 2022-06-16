@@ -2,7 +2,8 @@
 set -x
 
 # s2 l1 Metadata and indexing back-processing script
-# for one month and one region
+# for multiple months and all of the Australian area of interest
+# This file is generated in the dev_no_merge branch
 
 queue="normal"
 ncpus="48 "
@@ -14,10 +15,6 @@ module="eodatasets3/0.28.3"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 dry_run=" "
 index="--index "
-
-#Safety. Remove to generate into production.
-index=" "
-dry_run="--dry-run "
 
 project="v10"
 base_dir="/g/data/v10/work/s2_c3_ard/"
@@ -73,7 +70,6 @@ yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
 mkdir -p $yamdir
 
 # #*/ The end of the sed removed block of code
-
 mkdir -p $base_dir/logdir
 
 for month in "${months[@]}"; do
