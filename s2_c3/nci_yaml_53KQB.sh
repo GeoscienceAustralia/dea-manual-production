@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -x
 
 # s2 l1 Metadata and indexing back-processing script
 # for one month and one region
@@ -6,7 +7,7 @@
 queue="normal"
 ncpus="1 "
 config_arg=" "
-module="eodatasets3/0.28.1"
+module="eodatasets3/0.28.3"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 dry_run=" "
 index="--index "
@@ -50,7 +51,8 @@ index="--index "
 project="u46"
 base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline"
 #yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_53KQB/"
-yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
+#yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
+yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod_dsg/"
 mkdir -p $yamdir
 # #*/ The end of the sed removed block of code
 

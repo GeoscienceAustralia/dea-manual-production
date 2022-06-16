@@ -10,7 +10,7 @@ mem="192GB"
 walltime="08:00:00"
 
 config_arg=" "
-module="eodatasets3/0.28.1"
+module="eodatasets3/0.28.3"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 dry_run=" "
 index="--index "

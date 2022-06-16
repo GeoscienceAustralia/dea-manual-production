@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -x
 
 # s2 c3 ARD back-processing script
 
@@ -35,8 +36,8 @@ project="u46"
 base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline"
 
 #yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_53KQB/"
-#yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod_small/"
-yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
+yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod_dsg/"
+#yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
 
 #config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
 config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/dsg547_dev.conf"
@@ -46,7 +47,7 @@ index_arg="--index-datacube-env /g/data/u46/users/dsg547/sandbox/processingDEA/s
 
 scene_limit="--scene-limit 600"
 
-pkgdir=$base_dir/pkgdir_preprod
+pkgdir=$base_dir/pkgdir_preprod_dsg
 
 # #*/ The end of the sed removed block of code
 
