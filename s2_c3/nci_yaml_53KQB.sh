@@ -3,6 +3,7 @@ set -x
 
 # s2 l1 Metadata and indexing back-processing script
 # for one month and one region
+# This file is generated in the dev_no_merge branch
 
 queue="normal"
 ncpus="1 "

@@ -2,7 +2,8 @@
 set -x
 
 # s2 l1 Metadata and indexing back-processing script
-# for one month and one region
+# for one month and regions within one 5 deg box directory
+# This file is generated in the dev_no_merge branch
 
 queue="normal"
 ncpus="48 "
@@ -11,10 +12,6 @@ module="eodatasets3/0.28.3"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 dry_run=" "
 index="--index "
-
-#Safety. Remove to generate into production.
-index=" "
-dry_run="--dry-run "
 
 project="v10"
 base_dir="/g/data/v10/work/s2_c3_ard/"
