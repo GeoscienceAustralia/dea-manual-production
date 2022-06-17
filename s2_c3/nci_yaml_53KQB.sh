@@ -28,6 +28,7 @@ aftermonth="2021-05"
 beforemonth="2021-05"
 
 verbose=" "
+odc_env="--env datacube "
 
 # Having the info above as variables and some empty values
 # means I can easily test by adding some test code here
@@ -57,4 +58,5 @@ $index \
 $config_arg \
 --only-regions-in-file $aoi \
 --output-base $yamdir \
+$odc_env \
 $inputdir"
