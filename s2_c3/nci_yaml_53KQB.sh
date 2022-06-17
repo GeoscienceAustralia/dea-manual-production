@@ -18,7 +18,7 @@ index=" "
 dry_run="--dry-run "
 
 project="v10"
-base_dir="/g/data/v10/work/s2_c3_ard/"
+base_dir="/g/data/v10/work/s2_c3_ard"
 yamdir="/g/data/ka08/ga/l1c_metadata"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
@@ -34,7 +34,7 @@ verbose=" "
 # without modifying the code below.
 
 # #/* The sed command below will remove this block of test code
-# sed '/#\/\*/,/#\*\// d' nci_yaml_53KQB.sh > ../../nci_yaml_53KQB.sh
+# sed '/#\/\*/,/#\*\// d' nci_yaml_53KQB.sh > ../../nci_yaml_53KQB.sh;chmod +x ../../nci_yaml_53KQB.sh
 # sed '/#\/\*/,/#\*\// d' s2_c3/nci_yaml_53KQB.sh > ../nci_yaml_53KQB.sh
 # mv ../nci_yaml_53KQB.sh s2_c3/nci_yaml_53KQB.sh
 
@@ -63,7 +63,7 @@ qsub -N nci_yaml_job \
      -q  $queue  \
      -W umask=33 \
      -l wd,walltime=0:30:00,mem=100GB,ncpus=$ncpus -m abe \
-     -l storage=gdata/v10+scratch/v10+gdata/if87+gdata/fj7+scratch/fj7+gdata/u46 \
+     -l storage=gdata/ka08+scratch/ka08+gdata/v10+scratch/v10+gdata/if87+gdata/fj7+scratch/fj7+gdata/u46 \
      -P  $project -o $base_dir/logdir -e  $base_dir/logdir  \
      -- /bin/bash -l -c \
      "module use /g/data/v10/public/modules/modulefiles/; \

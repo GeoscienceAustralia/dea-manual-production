@@ -13,6 +13,10 @@ inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 dry_run=" "
 index="--index "
 
+#Safety. Remove to generate into production.
+index=" "
+dry_run="--dry-run "
+
 project="v10"
 base_dir="/g/data/v10/work/s2_c3_ard/"
 yamdir="/g/data/ka08/ga/l1c_metadata"
@@ -29,7 +33,7 @@ verbose=" "
 # without modifying the code below.
 
 # #/* The sed command below will remove this block of test code
-# sed '/#\/\*/,/#\*\// d' nci_yaml_small_region.sh > ../../nci_yaml_small_region.sh
+# sed '/#\/\*/,/#\*\// d' nci_yaml_small_region.sh > ../../nci_yaml_small_region.sh;chmod +x ../../nci_yaml_small_region.sh
 # sed '/#\/\*/,/#\*\// d' s2_c3/nci_yaml_small_region.sh > ../nci_yaml_small_region.sh
 # mv ../nci_yaml_small_region.sh s2_c3/nci_yaml_small_region.sh
 
