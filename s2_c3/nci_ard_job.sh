@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -x
 
 # s2 c3 ARD back-processing script
 
@@ -7,7 +8,7 @@ products_arg="""--products '["esa_s2am_level1_0", "esa_s2bm_level1_0"]'"""
 wagl_env="/g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/prod-wagl-s2.env"
 
 project="v10"
-base_dir="/g/data/v10/work/s2_c3_ard/"
+base_dir="/g/data/v10/work/s2_c3_ard"
 yamdir=" --yamls-dir /g/data/ka08/ga/l1c_metadata"
 config_arg=" "
 scene_limit="--scene-limit 6000"
@@ -34,7 +35,7 @@ qsub -N ard_scene_select \
      -q  $queue  \
      -W umask=33 \
      -l wd,walltime=0:40:00,mem=15GB,ncpus=1 -m abe \
-     -l storage=gdata/v10+scratch/v10+gdata/if87+gdata/fj7+scratch/fj7+gdata/u46 \
+     -l storage=gdata/ka08+scratch/ka08+gdata/v10+scratch/v10+gdata/if87+gdata/fj7+scratch/fj7+gdata/u46 \
      -P  $project -o $base_dir/logdir -e  $base_dir/logdir  \
      -- /bin/bash -l -c \
      "module use /g/data/v10/public/modules/modulefiles/; \
