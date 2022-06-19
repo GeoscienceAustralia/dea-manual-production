@@ -7,7 +7,6 @@ set -x
 
 queue="normal"
 ncpus="1 "
-config_arg=" "
 module="eodatasets3/0.28.3"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 dry_run=" "
@@ -23,12 +22,12 @@ yamdir="/g/data/ka08/ga/l1c_metadata"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 aoi=$SCRIPT_DIR/"53KQB.txt"
+config_arg="--config $SCRIPT_DIR/datacube.conf "
 
 aftermonth="2021-05"
 beforemonth="2021-05"
 
 verbose=" "
-odc_env="--env datacube "
 
 # Having the info above as variables and some empty values
 # means I can easily test by adding some test code here
@@ -40,8 +39,8 @@ odc_env="--env datacube "
 # mv ../nci_yaml_53KQB.sh s2_c3/nci_yaml_53KQB.sh
 
 # inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/2022/2022-01/25S135E-30S140E"
-#config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
-config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/dsg547_dev.conf"
+#config_arg="--config $SCRIPT_DIR/pipeline_test.conf"
+config_arg="--config $SCRIPT_DIR/dsg547_dev.conf"
 
 #dry_run="--dry-run "
 dry_run=" "
@@ -50,7 +49,6 @@ dry_run=" "
 index="--index "
 
 # dsg547
-odc_env=" "
 project="u46"
 base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline"
 #yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_53KQB/"
@@ -82,5 +80,4 @@ $index \
 $config_arg \
 --only-regions-in-file $aoi \
 --output-base $yamdir \
-$odc_env \
 $inputdir"
