@@ -7,7 +7,6 @@ set -x
 
 queue="normal"
 ncpus="1 "
-config_arg=" "
 module="eodatasets3/0.28.3"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 dry_run=" "
@@ -19,12 +18,12 @@ yamdir="/g/data/ka08/ga/l1c_metadata"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 aoi=$SCRIPT_DIR/"53KQB.txt"
+config_arg="--config $SCRIPT_DIR/datacube.conf "
 
 aftermonth="2021-05"
 beforemonth="2021-05"
 
 verbose=" "
-odc_env="--env datacube "
 
 # Having the info above as variables and some empty values
 # means I can easily test by adding some test code here
@@ -54,5 +53,4 @@ $index \
 $config_arg \
 --only-regions-in-file $aoi \
 --output-base $yamdir \
-$odc_env \
 $inputdir"
