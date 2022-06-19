@@ -20,6 +20,7 @@ pkgdir="/g/data/ka08/ga/"
 # Safety
 run_ard_arg=" "
 scene_limit="--scene-limit 1"
+index_arg=" "
 
 
 # Having the info above as variables and some empty values
@@ -47,8 +48,8 @@ yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_pre
 index_arg="--index-datacube-env /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/index-dsg547_dev.env"
 
 scene_limit="--scene-limit 600"
-#run_ard_arg="--run-ard"
-
+run_ard_arg="--run-ard"
+# index_arg=" "
 
 pkgdir=$base_dir/pkgdir_preprod_dsg
 
