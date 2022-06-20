@@ -7,7 +7,6 @@ set -x
 
 queue="normal"
 ncpus="48 "
-config_arg=" "
 module="eodatasets3/0.28.3"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 dry_run=" "
@@ -23,6 +22,7 @@ yamdir="/g/data/ka08/ga/l1c_metadata"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 aoi=$SCRIPT_DIR/"regions_25S135E-30S140E_only.txt"
+config_arg="--config $SCRIPT_DIR/datacube.conf "
 
 aftermonth="2022-01"
 beforemonth="2022-01"
