@@ -12,10 +12,6 @@ inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 dry_run=" "
 index="--index "
 
-#Safety. Remove to generate into production.
-index=" "
-dry_run="--dry-run "
-
 project="v10"
 base_dir="/g/data/v10/work/s2_c3_ard"
 yamdir="/g/data/ka08/ga/l1c_metadata"
