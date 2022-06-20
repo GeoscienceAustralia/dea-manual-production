@@ -10,7 +10,6 @@ ncpus="48 "
 mem="192GB"
 walltime="08:00:00"
 
-config_arg=" "
 module="eodatasets3/0.28.3"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 dry_run=" "
@@ -25,6 +24,9 @@ base_dir="/g/data/v10/work/s2_c3_ard"
 yamdir="/g/data/ka08/ga/l1c_metadata"
 
 aoi="/g/data/v10/projects/c3_ard/dea-ard-scene-select/scene_select/data/Australian_tile_list_optimised.txt"
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
+config_arg="--config $SCRIPT_DIR/datacube.conf "
 
 verbose=" "
 
