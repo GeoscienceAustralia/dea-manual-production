@@ -39,7 +39,7 @@ else
    index=" "
    ncpus="1 "
    mem="20GB"
-   walltime="00:10:00"
+   walltime="01:00:00"
 fi
 
 # Having the info above as variables and some empty values
