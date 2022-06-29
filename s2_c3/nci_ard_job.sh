@@ -11,11 +11,13 @@ project="v10"
 base_dir="/g/data/v10/work/s2_c3_ard"
 yamdir=" --yamls-dir /g/data/ka08/ga/l1c_metadata"
 config_arg=" "
-scene_limit="--scene-limit 200000"
+scene_limit="--scene-limit 1"
 run_ard_arg="--run-ard"
-index_arg="--index-datacube-env /g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/index-datacube.env"
+#index_arg="--index-datacube-env /g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/index-datacube.env"
+index_arg=" "
 module_ass="ard-scene-select-py3-dea/20220516"
-pkgdir="/g/data/ka08/ga/"
+#pkgdir="/g/data/ka08/ga/"
+pkgdir="/g/data/v10/work/s2_c3_ard/lpgs_test"
 
 # Having the info above as variables and some empty values
 # means I can easily test by adding some test code here
@@ -45,7 +47,7 @@ qsub -N ard_scene_select \
                   --logdir $base_dir/logdir \
                   --env $wagl_env  \
                   --project  $project \
-                  --walltime 10:00:00 \
+                  --walltime 4:10:00 \
                   $index_arg \
                   $scene_limit \
                   $yamdir \
