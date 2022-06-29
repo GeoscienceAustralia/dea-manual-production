@@ -17,7 +17,7 @@ run_ard_arg="--run-ard"
 index_arg=" "
 module_ass="ard-scene-select-py3-dea/20220516"
 #pkgdir="/g/data/ka08/ga/"
-pkgdir="/g/data/v10/work/s2_c3_ard/lpgs_test"
+pkgdir="/g/data/ka08/ga_test/"
 
 # Having the info above as variables and some empty values
 # means I can easily test by adding some test code here
