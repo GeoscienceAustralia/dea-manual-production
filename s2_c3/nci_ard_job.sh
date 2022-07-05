@@ -57,7 +57,7 @@ mkdir -p $base_dir/logdir
 qsub -N ard_scene_select \
      -q  $queue  \
      -W umask=33 \
-     -l wd,walltime=0:40:00,mem=15GB,ncpus=1 -m abe \
+     -l wd,walltime=02:40:00,mem=15GB,ncpus=1 -m abe \
      -l storage=gdata/ka08+scratch/ka08+gdata/v10+scratch/v10+gdata/if87+gdata/fj7+scratch/fj7+gdata/u46 \
      -P  $project -o $base_dir/logdir -e  $base_dir/logdir  \
      -- /bin/bash -l -c \
