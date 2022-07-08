@@ -45,7 +45,7 @@ qsub -N ard_scene_select \
                   --logdir $base_dir/logdir \
                   --env $wagl_env  \
                   --project  $project \
-                  --walltime 10:00:00 \
+                  --walltime 20:00:00 \
                   $index_arg \
                   $scene_limit \
                   $yamdir \
