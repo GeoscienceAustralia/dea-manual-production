@@ -11,7 +11,10 @@ project="v10"
 base_dir="/g/data/v10/work/s2_c3_ard"
 yamdir=" --yamls-dir /g/data/ka08/ga/l1c_metadata"
 config_arg=" "
+
 scene_limit="--scene-limit 60"
+days_to_exclude="--days-to-exclude '[\"2021-01-01:2021-08-31\",\"2022-01-01:2022-01-31\"]'"
+
 run_ard_arg="--run-ard"
 index_arg="--index-datacube-env /g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/index-datacube.env"
 module_ass="ard-scene-select-py3-dea/20220516"
@@ -32,7 +35,7 @@ project="u46"
 base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline"
 
 #yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_53KQB/"
-yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod_dsg/"
+#yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod_dsg/"
 #yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
 
 #config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
@@ -41,11 +44,14 @@ yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_pre
 # Index ARD into pipeline_test
 index_arg="--index-datacube-env /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/index-dsg547_dev.env"
 
-scene_limit="--scene-limit 600"
-run_ard_arg="--run-ard"
-# index_arg=" "
+# Dry or not?
+scene_limit="--scene-limit 60000"
+# run_ard_arg="--run-ard"
+run_ard_arg=" "
+index_arg=" "
 
-pkgdir=$base_dir/pkgdir_preprod_dsg
+#pkgdir=$base_dir/pkgdir_preprod_dsg
+pkgdir="/g/data/ka08/give_me_access_to_v10_but_that_should_be_all"
 
 # #*/ The end of the sed removed block of code
 
@@ -76,4 +82,5 @@ qsub -N ard_scene_select \
                   $index_arg \
                   $scene_limit \
                   $yamdir \
+		  $days_to_exclude \
                   $run_ard_arg "
