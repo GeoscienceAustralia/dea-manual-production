@@ -13,6 +13,8 @@ yamdir=" --yamls-dir /g/data/ka08/ga/l1c_metadata"
 config_arg=" "
 
 scene_limit="--scene-limit 60"
+
+#days_to_exclude="--days-to-exclude '[\"2021-01-01:2021-08-31\",\"2022-01-01:2022-01-31\"]'"
 days_to_exclude=" "
 
 run_ard_arg="--run-ard"
