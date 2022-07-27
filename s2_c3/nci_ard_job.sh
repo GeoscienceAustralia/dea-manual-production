@@ -19,7 +19,7 @@ days_to_exclude=" "
 
 run_ard_arg="--run-ard"
 index_arg="--index-datacube-env /g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/index-datacube.env"
-module_ass="ard-scene-select-py3-dea/20220516"
+module_ass="ard-scene-select-py3-dea/20220727"
 pkgdir="/g/data/ka08/ga/"
 
 # Having the info above as variables and some empty values
@@ -33,6 +33,9 @@ pkgdir="/g/data/ka08/ga/"
 
 #days_to_exclude="--days-to-exclude '[\"2021-01-01:2021-08-31\",\"2022-01-01:2022-01-31\"]'"
 
+# To remove scenes that haven't been ARD processed yet.
+days_to_exclude="--days-to-exclude '[\"2020-04-01:2020-05-01\"]'"
+
 # dsg547
 project="u46"
 base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline"
@@ -41,14 +44,14 @@ base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline"
 #yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod_dsg/"
 yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
 
-#config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
-#index_arg="--index-datacube-env /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/index-pipeline_test.env"
+config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
+index_arg="--index-datacube-env /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/index-pipeline_test.env"
 
-config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/dsg547_dev.conf"
-index_arg="--index-datacube-env /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/index-dsg547_dev.env"
+#config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/dsg547_dev.conf"
+#index_arg="--index-datacube-env /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/index-dsg547_dev.env"
 
 # Dry or not?
-scene_limit="--scene-limit 60"
+#scene_limit="--scene-limit 600"
 run_ard_arg="--run-ard"
 #run_ard_arg=" "
 #index_arg=" "
