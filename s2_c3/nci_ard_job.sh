@@ -19,7 +19,7 @@ days_to_exclude=" "
 
 run_ard_arg="--run-ard"
 index_arg="--index-datacube-env /g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/index-datacube.env"
-module_ass="ard-scene-select-py3-dea/20220516"
+module_ass="ard-scene-select-py3-dea/20220727"
 pkgdir="/g/data/ka08/ga/"
 
 # Having the info above as variables and some empty values
