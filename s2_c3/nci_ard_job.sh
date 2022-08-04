@@ -34,32 +34,32 @@ pkgdir="/g/data/ka08/ga/"
 #days_to_exclude="--days-to-exclude '[\"2021-01-01:2021-08-31\",\"2022-01-01:2022-01-31\"]'"
 
 # To remove scenes that haven't been ARD processed yet.
-days_to_exclude="--days-to-exclude '[\"2020-04-01:2020-05-01\"]'"
+#days_to_exclude="--days-to-exclude '[\"2020-04-01:2020-05-01\"]'"
 
 # dsg547
 project="u46"
 base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline"
 
-#yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_53KQB/"
+yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_53KQB/"
 #yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod_dsg/"
 #yamdir=" --yamls-dir /g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
 
 #config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/pipeline_test.conf"
 #index_arg="--index-datacube-env /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/index-pipeline_test.env"
 
-#config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/dsg547_dev.conf"
-#index_arg="--index-datacube-env /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/index-dsg547_dev.env"
+config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/dsg547_dev.conf"
+index_arg="--index-datacube-env /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/index-dsg547_dev.env"
 
 # Dry or not?
 scene_limit="--scene-limit 60"
 run_ard_arg="--run-ard"
 #run_ard_arg=" "
-index_arg=" "
+#index_arg=" "
 
-pkgdir=$base_dir/pkgdir_preprod
+pkgdir=$base_dir/pkgdir_53JQK
 #pkgdir="/g/data/ka08/give_me_access_to_v10_but_that_should_be_all"
 
-wagl_env="/g/data/ka08/ga/testing/prod-wagl-s2.env"
+#wagl_env="/g/data/ka08/ga/testing/prod-wagl-s2.env"
 # #*/ The end of the sed removed block of code
 
 mkdir -p $pkgdir
