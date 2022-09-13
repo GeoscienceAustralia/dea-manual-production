@@ -10,7 +10,7 @@ ncpus="48 "
 mem="192GB"
 walltime="08:00:00"
 
-module="eodatasets3/0.29.0"
+module="eodatasets3/0.28.3"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 
 project="v10"
@@ -59,13 +59,8 @@ config_arg="--config /g/data/u46/users/dsg547/sandbox/processingDEA/s2_pipeline/
 project="u46"
 base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline"
 
-year=2016
-#months=(01 02 03 04 05 06 07 08 09 10 11 12)
-months=(07)
-
 # Keeping this so the ARD will work.
-#yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
-yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod_2016/"
+yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
 mkdir -p $yamdir
 
 # #*/ The end of the sed removed block of code
