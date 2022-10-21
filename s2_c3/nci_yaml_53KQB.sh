@@ -7,7 +7,7 @@ set -x
 
 queue="normal"
 ncpus="1 "
-module="eodatasets3/0.28.3"
+module="eodatasets3/0.29.0"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 dry_run=" "
 index="--index "
