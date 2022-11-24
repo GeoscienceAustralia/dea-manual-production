@@ -10,7 +10,7 @@ ncpus="48 "
 mem="192GB"
 walltime="08:00:00"
 
-module="eodatasets3/0.29.4"
+module="eodatasets3/0.29.5"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 
 project="v10"
