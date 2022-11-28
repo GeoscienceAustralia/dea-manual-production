@@ -10,7 +10,7 @@ ncpus="48 "
 mem="192GB"
 walltime="08:00:00"
 
-module="eodatasets3/0.29.5"
+module="eodatasets3/0.29.4"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 
 project="v10"
@@ -24,9 +24,6 @@ config_arg="--config $SCRIPT_DIR/datacube.conf "
 
 verbose=" "
 
-year=2021
-months=(01 02 03 04 05 06 07 08 09 10 11 12)
-months=(01)
 
 # run ['dry'|'actual']
 run='dry'
@@ -42,7 +39,7 @@ else
     cpus="1 "
     em="20GB"
     alltime="01:00:00"
-    base_dir=$SCRIPT_DIR
+    # base_dir=$SCRIPT_DIR
 fi
 
 # Having the info above as variables and some empty values
@@ -60,7 +57,8 @@ fi
 
 # dsg547
 project="u46"
-base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline/eod29_5"
+#base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline/eod29_5"
+base_dir="/g/data/v10/Landsat-Collection-3-ops/yaml/16_20eod29_4"
 
 # Keeping this so the ARD will work.
 #yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
@@ -69,7 +67,6 @@ base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline/eod29_5"
 # #*/ The end of the sed removed block of code
 mkdir -p $base_dir/logdir
 
-for month in "${months[@]}"; do
 qsub -N nci_yaml_job \
      -q  $queue  \
      -W umask=33 \
@@ -84,12 +81,12 @@ set -x; \
 eo3-prepare sentinel-l1  \
 $verbose \
 --jobs $ncpus  \
---after-month $year-$month \
---before-month $year-$month \
+--after-month 2016-11 \
+--before-month 2020-12 \
 $dry_run \
 $index \
 $config_arg \
 --only-regions-in-file $aoi \
 --output-base $yamdir \
 $inputdir"
-done
+
