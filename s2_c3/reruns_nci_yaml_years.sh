@@ -10,7 +10,7 @@ ncpus="48 "
 mem="192GB"
 walltime="08:00:00"
 
-module="eodatasets3/0.29.4"
+module="eodatasets3/0.29.5"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 
 project="v10"
@@ -58,7 +58,7 @@ fi
 # dsg547
 project="u46"
 #base_dir="/g/data/u46/users/dsg547/test_data/s2_pipeline/eod29_5"
-base_dir="/g/data/v10/Landsat-Collection-3-ops/yaml/16_20eod29_4"
+base_dir="/g/data/v10/Landsat-Collection-3-ops/yaml/15_16eod29_5"
 
 # Keeping this so the ARD will work.
 #yamdir="/g/data/u46/users/dsg547/test_data/s2_pipeline/yaml_nci_preprod/"
@@ -81,8 +81,8 @@ set -x; \
 eo3-prepare sentinel-l1  \
 $verbose \
 --jobs $ncpus  \
---after-month 2016-11 \
---before-month 2020-12 \
+--after-month 2015-01 \
+--before-month 2016-10 \
 $dry_run \
 $index \
 $config_arg \
