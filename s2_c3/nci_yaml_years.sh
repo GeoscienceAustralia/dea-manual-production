@@ -24,9 +24,10 @@ config_arg="--config $SCRIPT_DIR/datacube.conf "
 
 verbose=" "
 
-year=2021
-#months=(01 02 03 04 05 06 07 08 09 10 11 12)
-months=(01 02)
+year=2022
+months=(01 02 03 04 05 06 07 08 09 10 11 12)
+
+#months=(10)
 
 # run ['dry'|'actual']
 run='dry'
