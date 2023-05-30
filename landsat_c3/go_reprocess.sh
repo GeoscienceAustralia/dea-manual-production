@@ -31,11 +31,11 @@ new_base_path="/g/data/xu18/ga/reprocessing_staged_for_removal"
 
 project="v10"
 pkgdir="/g/data/xu18/ga"
-date=$(date '+%Y%m%d_%H%M%S')
+date=$(date '+%Y%m%dT%H%M%S')
 basedir="/g/data/v10/work/ls_c3_ard/"
 
-logdir="$basedir/logdir/$date"
-workdir="$basedir/workdir/$date"
+logdir="$basedir/logdir/${date}_reprocess"
+workdir="$basedir/workdir/${date}_reprocess"
 
 mkdir -p "$logdir"
 mkdir -p "$workdir"
