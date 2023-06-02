@@ -10,10 +10,10 @@ date=$(date '+%Y%m%dT%H%M')
 basedir="/g/data/v10/work/ls_c3_ard"
 #basedir=$DIR
 
-logdir="$basedir/logdir/${date}_reprocess"
+# These logs could be with the other logs, but that would involve
+# passing directory arguements around
 mkdir -p $logdir
-cd $logdir
 
-PBS_LOG=$logdir/submit_ard_prod.log
+PBS_LOG=$logdir/${date}_submit_ard_prod.log
 
 qsub -v INIT_PWD=$DIR $DIR/go_reprocess.sh >>$PBS_LOG 2>&1

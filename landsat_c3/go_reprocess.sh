@@ -42,7 +42,7 @@ new_ard_path="/g/data/xu18/ga/reprocessing_staged_for_removal"
 
 project="v10"
 pkgdir="/g/data/xu18/ga"
-date=$(date '+%Y%m%dT%H%M')
+date=$(date '+%Y%m%dT%H%M%S')
 basedir="/g/data/v10/work/ls_c3_ard"
 
 logdir="$basedir/logdir/${date}_reprocess"
