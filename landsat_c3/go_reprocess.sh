@@ -29,7 +29,7 @@ if [ -z "$1" ]
 else
 	scene_limit_value=$1
 fi
-
+scene_limit_value=1
 dry_run=" "
 run_ard="--run-ard"
 dry_run="--dry-run"

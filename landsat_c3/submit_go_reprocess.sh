@@ -22,4 +22,4 @@ cd $logdir
 # low value file
 PBS_LOG=$logdir/submit_ard_prod.log
 
-qsub -v INIT_PWD=$DIR $DIR/go_reprocess.sh 1 >>$PBS_LOG 2>&1
+qsub -v INIT_PWD=$DIR $DIR/go_reprocess.sh >>$PBS_LOG 2>&1
