@@ -5,8 +5,6 @@
 # location of the script and environment files used in production
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-# Capturing the .e & .o files in a run dir
-date=$(date '+%Y%m%dT%H%M')
 basedir="/g/data/v10/work/ls_c3_ard"
 #basedir=$DIR
 
@@ -16,7 +14,7 @@ logdir="$basedir/logdir/reprocess_e_o"
 mkdir -p $logdir
 
 # the e and o files are written to the log dir since
-# the qsub call is from the log dir
+# the qsub call is from the logdir
 cd $logdir
 
 # low value file
