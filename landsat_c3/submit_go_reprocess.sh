@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ssh lpgs@gadi-dm.nci.org.au /g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/submit_ard_prod.sh
+# ssh lpgs@gadi-dm.nci.org.au /home/547/lpgs/sandbox/dea-manual-production/landsat_c3/submit_go_reprocess.sh
 
 # location of the script and environment files used in production
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
