@@ -32,6 +32,8 @@ fi
 
 dry_run=" "
 run_ard="--run-ard"
+dry_run="--dry-run"
+run_ard=""
 ard_env="/g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/prod-wagl-ls.env"
 index_arg="--index-datacube-env /g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/index-datacube.env"
 ard_path="/g/data/xu18/ga/"

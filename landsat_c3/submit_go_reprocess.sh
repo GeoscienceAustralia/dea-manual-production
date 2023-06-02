@@ -15,6 +15,11 @@ basedir="/g/data/v10/work/ls_c3_ard"
 logdir="$basedir/logdir/reprocess_e_o"
 mkdir -p $logdir
 
-PBS_LOG=$logdir/${date}_submit_ard_prod.log
+# the e and o files are written to the log dir since
+# the qsub call is from the log dir
+cd $logdir
+
+# low value file
+PBS_LOG=$logdir/submit_ard_prod.log
 
 qsub -v INIT_PWD=$DIR $DIR/go_reprocess.sh 1 >>$PBS_LOG 2>&1
