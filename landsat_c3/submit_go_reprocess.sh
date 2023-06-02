@@ -12,6 +12,7 @@ basedir="/g/data/v10/work/ls_c3_ard"
 
 # These logs could be with the other logs, but that would involve
 # passing directory arguements around
+logdir="$basedir/logdir/reprocess_e_o"
 mkdir -p $logdir
 
 PBS_LOG=$logdir/${date}_submit_ard_prod.log
