@@ -2,6 +2,14 @@
 # If a number is passed in it is assumed to be the scene limit
 # otherwise the default is 400
 
+#PBS -P v10
+#PBS -W umask=017
+#PBS -q express
+#PBS -l walltime=02:00:00,mem=155GB,other=pernodejobfs
+#PBS -l wd
+#PBS -l storage=gdata/v10+scratch/v10+gdata/if87+gdata/xu18+scratch/xu18+scratch/u46+gdata/u46
+#PBS -l ncpus=1
+
 set -o errexit
 set -o xtrace
 
@@ -24,6 +32,9 @@ fi
 
 dry_run=" "
 run_ard="--run-ard"
+scene_limit_value=1
+dry_run="--dry-run"
+run_ard=""
 ard_env="/g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/prod-wagl-ls.env"
 index_arg="--index-datacube-env /g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/index-datacube.env"
 ard_path="/g/data/xu18/ga/"
@@ -31,7 +42,7 @@ new_ard_path="/g/data/xu18/ga/reprocessing_staged_for_removal"
 
 project="v10"
 pkgdir="/g/data/xu18/ga"
-date=$(date '+%Y%m%dT%H%M%S')
+date=$(date '+%Y%m%dT%H%M')
 basedir="/g/data/v10/work/ls_c3_ard"
 
 logdir="$basedir/logdir/${date}_reprocess"
