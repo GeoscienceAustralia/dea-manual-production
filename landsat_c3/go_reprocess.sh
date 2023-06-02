@@ -29,7 +29,7 @@ if [ -z "$1" ]
 else
 	scene_limit_value=$1
 fi
-scene_limit_value=1
+
 dry_run=" "
 run_ard="--run-ard"
 ard_env="/g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/prod-wagl-ls.env"
