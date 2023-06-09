@@ -18,7 +18,7 @@ if [[ "$HOSTNAME" == *"gadi"* ]]; then
 	module use /g/data/v10/public/modules/modulefiles
 	module use /g/data/v10/private/modules/modulefiles
 
-	module load ard-scene-select-py3-dea/20230606
+	module load ard-scene-select-py3-dea/20230609
 
 fi
 
@@ -47,7 +47,6 @@ workdir="$basedir/workdir/${date}_reprocess"
 
 mkdir -p "$logdir"
 mkdir -p "$workdir"
-
 
 # ard-reprocessed-l1s module
 ard-reprocessed-l1s --walltime 10:00:00 \
