@@ -51,16 +51,17 @@ pkgdir="/g/data/ka08/ga/"
 CURRENT_DATE=$(date +'%Y%m%dT%H%M%S')
 
 mkdir -p $pkgdir
-
-mkdir -p $base_dir/workdir/${CURRENT_DATE}
-mkdir -p $base_dir/logdir/${CURRENT_DATE}_ard
+workdir=$base_dir/workdir/${CURRENT_DATE}
+logdir=$base_dir/logdir/${CURRENT_DATE}_ard
+mkdir -p $workdir
+mkdir -p $logdir
 
 qsub -N ard_scene_select \
      -q  $queue  \
      -W umask=33 \
      -l wd,walltime=02:40:00,mem=15GB,ncpus=1 -m abe \
      -l storage=gdata/ka08+scratch/ka08+gdata/v10+scratch/v10+gdata/if87+gdata/fj7+scratch/fj7+gdata/u46 \
-     -P  $project -o $base_dir/logdir/${CURRENT_DATE}_ard -e  $base_dir/logdir/${CURRENT_DATE}_ard  \
+     -P  $project -o $logdir -e  $logdir  \
      -- /bin/bash -l -c \
      "module use /g/data/v10/public/modules/modulefiles/; \
                   module use /g/data/v10/private/modules/modulefiles/; \
@@ -68,9 +69,9 @@ qsub -N ard_scene_select \
                   ard-scene-select \
                   $products_arg \
                   $config_arg \
-                  --workdir $base_dir/workdir \
+                  --workdir $workdir \
                   --pkgdir $pkgdir \
-                  --logdir $base_dir/logdir \
+                  --logdir $logdir \
                   --env $wagl_env  \
                   --project  $project \
                   --walltime 20:00:00 \
