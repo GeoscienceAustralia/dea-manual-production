@@ -38,7 +38,7 @@ days_to_exclude="--days-to-exclude '[\"2015-01-01:2016-12-31\",\"2022-08-19:2029
 
 
 run_ard_arg="--run-ard"
-run_ard_arg=" "
+# run_ard_arg=" "
 index_arg="--index-datacube-env /g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/index-datacube.env"
 
 module_ass="ard-scene-select-py3-dea/20230330"
