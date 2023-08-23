@@ -32,33 +32,35 @@ scene_limit="--scene-limit 10000"
 #days_to_exclude="--days-to-exclude '[\"2015-07-01:2016-02-28\",\"2016-11-01:2023-09-01\"]'"
 #days_to_exclude="--days-to-exclude '[\"2015-01-01:2015-07-31\",\"2015-12-01:2023-09-01\"]'"
 #days_to_exclude="--days-to-exclude '[\"2015-01-01:2015-07-31\",\"2016-11-01:2023-09-01\"]'"
-days_to_exclude="--days-to-exclude '[\"2015-01-01:2016-12-31\",\"2022-09-01:2023-09-01\"]'"
+days_to_exclude="--days-to-exclude '[\"2015-01-01:2016-12-31\",\"2022-08-19:2029-09-01\"]'"
 
 
 
 
 run_ard_arg="--run-ard"
+run_ard_arg=" "
 index_arg="--index-datacube-env /g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/index-datacube.env"
 
-module_ass="ard-scene-select-py3-dea/20221025"
+module_ass="ard-scene-select-py3-dea/20230330"
 pkgdir="/g/data/ka08/ga/"
 
 # Having the info above as variables and some empty values
 # means I can easily test by adding some test code here
 # without modifying the code below.
 
+CURRENT_DATE=$(date +'%Y%m%dT%H%M%S')
 
 mkdir -p $pkgdir
 
-mkdir -p $base_dir/workdir
-mkdir -p $base_dir/logdir
+mkdir -p $base_dir/workdir/${CURRENT_DATE}
+mkdir -p $base_dir/logdir/${CURRENT_DATE}_ard
 
 qsub -N ard_scene_select \
      -q  $queue  \
      -W umask=33 \
      -l wd,walltime=02:40:00,mem=15GB,ncpus=1 -m abe \
      -l storage=gdata/ka08+scratch/ka08+gdata/v10+scratch/v10+gdata/if87+gdata/fj7+scratch/fj7+gdata/u46 \
-     -P  $project -o $base_dir/logdir -e  $base_dir/logdir  \
+     -P  $project -o $base_dir/logdir/${CURRENT_DATE}_ard -e  $base_dir/logdir/${CURRENT_DATE}_ard  \
      -- /bin/bash -l -c \
      "module use /g/data/v10/public/modules/modulefiles/; \
                   module use /g/data/v10/private/modules/modulefiles/; \
