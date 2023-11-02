@@ -32,7 +32,9 @@ scene_limit="--scene-limit 10000"
 #days_to_exclude="--days-to-exclude '[\"2015-07-01:2016-02-28\",\"2016-11-01:2023-09-01\"]'"
 #days_to_exclude="--days-to-exclude '[\"2015-01-01:2015-07-31\",\"2015-12-01:2023-09-01\"]'"
 #days_to_exclude="--days-to-exclude '[\"2015-01-01:2015-07-31\",\"2016-11-01:2023-09-01\"]'"
-days_to_exclude="--days-to-exclude '[\"2015-01-01:2016-12-31\",\"2022-08-19:2029-09-01\"]'"
+days_to_exclude="--days-to-exclude '[\"2015-01-01:2022-08-31\"]'"
+#days_to_exclude="--days-to-exclude '[\"2015-01-01:2015-12-31\",\"2017-01-01:2029-09-01\"]'"
+#days_to_exclude="--days-to-exclude '[\"2017-01-01:2029-09-01\"]'"
 
 
 
