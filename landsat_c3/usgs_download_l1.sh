@@ -13,6 +13,7 @@ STER_LOG_DIR=${LOG_DIR}/${CURRENT_DATE}
 mkdir -p $STER_LOG_DIR;
 
 #PROD
+# Check with Duncan before downloading pre 2022 data
 export ENVIRONMENT=NCI-DEF-PROD;/home/547/lpgs/sandbox/usgsdownloader/usgsdownloader/go_usgs_downloader.sh --pipeline L8L1C2 --logPath $LOG_DIR --startDate 20231001 --endDate 20231016 &> ${STER_LOG_DIR}/extra_extent.log
 # /scratch/v10/USGSM2M/
 #  --oneScene
