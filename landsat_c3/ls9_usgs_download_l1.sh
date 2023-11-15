@@ -16,7 +16,7 @@ mkdir -p $STER_LOG_DIR;
 # Used for downloading extra 9 l1 c2 2013 - 2021
 # Reduced extras region list since ARDs have been produced, from l1 c1, for some of the extra regions.
 # Using the usgsdownloader repo branch ls_ARD_filtered
-export ENVIRONMENT=NCI-DEF-PROD;/home/547/lpgs/sandbox/ls9_only_download/usgsdownloader/usgsdownloader/go_usgs_downloader.sh --pipeline L89L1C2EXTRA --logPath $LOG_DIR  --startDate 20211101 --endDate 20211231 --dryrun &> ${STER_LOG_DIR}/pre_2022_ls9_extra_extent.log
+export ENVIRONMENT=NCI-DEF-PROD;/home/547/lpgs/sandbox/ls9_only_download/usgsdownloader/usgsdownloader/go_usgs_downloader.sh --pipeline L89L1C2EXTRA --logPath $LOG_DIR  --startDate 20211101 --endDate 20211231  &> ${STER_LOG_DIR}/pre_2022_ls9_extra_extent.log
 
 
 #  --dryrun --oneScene
