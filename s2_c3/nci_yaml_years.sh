@@ -22,6 +22,7 @@ yamdir="/g/data/ka08/ga/l1c_metadata"
 
 aoi="/g/data/v10/work/landsat_downloads/landsat-downloader/config/s2_additional_regions.txt"
 
+
 # SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 config_arg="--config /g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/datacube.conf "
 
@@ -30,11 +31,12 @@ verbose=" "
 year=2023
 months=(01 02 03 04 05 06 07 08 09 10 11 12)
 
-#months=(10)
+months=(10)
+aoi="/g/data/v10/work/landsat_downloads/landsat-downloader/config/51LWD.txt"
 
 # run ['dry'|'actual']
-run='dry'
-#run='actual'
+#run='dry'
+run='actual'
 if [ "${run}" = "actual" ]; then
    dry_run=" "
    index="--index "
