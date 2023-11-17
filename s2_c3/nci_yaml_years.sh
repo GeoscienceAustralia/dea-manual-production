@@ -46,7 +46,7 @@ else
    ncpus="1 "
    mem="20GB"
    walltime="01:00:00"
-   months=(01)
+   months=(10)
    aoi="/g/data/v10/work/landsat_downloads/landsat-downloader/config/51LWD.txt"
 fi
 
