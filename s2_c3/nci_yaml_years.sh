@@ -10,17 +10,20 @@ ncpus="48 "
 mem="192GB"
 walltime="08:00:00"
 
-module="eodatasets3/0.29.5"
+module="eodatasets3/0.29.6"
 inputdir="/g/data/fj7/Copernicus/Sentinel-2/MSI/L1C/"
 
 project="v10"
-base_dir="/g/data/v10/work/s2_c3_ard"
+
+export EXECUTION_TIMESTAMP_DIR=$(date +'%Y%m%dT%H%M%S');
+
+logdir="/g/data/v10/work/s2_c3_ard/logdir/"$EXECUTION_TIMESTAMP_DIR
 yamdir="/g/data/ka08/ga/l1c_metadata"
 
 aoi="/g/data/v10/work/landsat_downloads/landsat-downloader/config/s2_additional_regions.txt"
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
-config_arg="--config $SCRIPT_DIR/datacube.conf "
+# SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
+config_arg="--config /g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/datacube.conf "
 
 verbose=" "
 
@@ -49,7 +52,7 @@ fi
 # means I can easily test by adding some test code here
 # without modifying the code below.
 
-mkdir -p $base_dir/logdir
+mkdir -p $logdir
 
 for month in "${months[@]}"; do
 qsub -N nci_yaml_job \
@@ -57,7 +60,7 @@ qsub -N nci_yaml_job \
      -W umask=33 \
      -l wd,walltime=$walltime,mem=$mem,ncpus=$ncpus -m abe \
      -l storage=gdata/ka08+scratch/ka08+gdata/v10+scratch/v10+gdata/if87+gdata/fj7+scratch/fj7+gdata/u46 \
-     -P  $project -o $base_dir/logdir -e  $base_dir/logdir  \
+     -P  $project -o $logdir -e  $logdir  \
      -- /bin/bash -l -c \
      "module use /g/data/v10/public/modules/modulefiles/; \
 module use /g/data/v10/private/modules/modulefiles/; \
