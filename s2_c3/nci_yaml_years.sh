@@ -24,7 +24,7 @@ config_arg="--config $SCRIPT_DIR/datacube.conf "
 
 verbose=" "
 
-year=2022
+year=2023
 months=(01 02 03 04 05 06 07 08 09 10 11 12)
 
 #months=(10)
@@ -32,7 +32,7 @@ months=(01 02 03 04 05 06 07 08 09 10 11 12)
 # run ['dry'|'actual']
 run='dry'
 #run='actual'
-if [ "$run" = "actual" ]; then
+if [ "${run}" = "actual" ]; then
    dry_run=" "
    index="--index "
 else
@@ -41,6 +41,8 @@ else
    ncpus="1 "
    mem="20GB"
    walltime="01:00:00"
+   months=(01)
+   aoi="/g/data/v10/work/landsat_downloads/landsat-downloader/config/51LWD.txt"
 fi
 
 # Having the info above as variables and some empty values
