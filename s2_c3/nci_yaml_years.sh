@@ -17,7 +17,7 @@ project="v10"
 
 export EXECUTION_TIMESTAMP_DIR=$(date +'%Y%m%dT%H%M%S');
 
-logdir="/g/data/v10/work/s2_c3_ard/logdir/"$EXECUTION_TIMESTAMP_DIR
+logdir="/g/data/v10/work/s2_c3_ard/"$EXECUTION_TIMESTAMP_DIR
 yamdir="/g/data/ka08/ga/l1c_metadata"
 
 aoi="/g/data/v10/work/landsat_downloads/landsat-downloader/config/s2_additional_regions.txt"
@@ -35,8 +35,8 @@ months=(10)
 aoi="/g/data/v10/work/landsat_downloads/landsat-downloader/config/51LWD.txt"
 
 # run ['dry'|'actual']
-#run='dry'
-run='actual'
+run='dry'
+#run='actual'
 if [ "${run}" = "actual" ]; then
    dry_run=" "
    index="--index "
