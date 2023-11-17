@@ -78,6 +78,5 @@ $index \
 $config_arg \
 --only-regions-in-file $aoi \
 --output-base $yamdir \
-$inputdir; \
-grep debug -v $logdir/*.OU > $logdir/no_debug_yaml_job.log"
+$inputdir; "
 done
