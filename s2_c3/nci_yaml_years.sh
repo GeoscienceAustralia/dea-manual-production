@@ -32,7 +32,7 @@ year=2023
 months=(01 02 03 04 05 06 07 08 09 10 11 12)
 
 months=(10)
-aoi="/g/data/v10/work/landsat_downloads/landsat-downloader/config/51LWD.txt"
+# aoi="/g/data/v10/work/landsat_downloads/landsat-downloader/config/51LWD.txt"
 
 # run ['dry'|'actual']
 run='dry'
