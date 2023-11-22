@@ -7,7 +7,7 @@ if [[ $HOSTNAME == *"gadi"* ]]; then
   module load dea
 fi
 
-LOG_DIR="/g/data/v10/work/landsat_downloads/L8L1C2_logs/"
+LOG_DIR="/g/data/v10/work/landsat_downloads/L7L1C2_logs/"
 export CURRENT_DATE=$(date +'%Y%m%dT%H%M%S');
 STER_LOG_DIR=${LOG_DIR}/${CURRENT_DATE}
 mkdir -p $STER_LOG_DIR;
