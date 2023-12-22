@@ -5,7 +5,7 @@ set -x
 
 queue="copyq"
 products_arg="""--products '["esa_s2am_level1_0", "esa_s2bm_level1_0"]'"""
-wagl_env="/g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/prod-wagl-s2.env"
+wagl_env="/home/547/lpgs/sandbox/dea-manual-production/s2_c3/prod-wagl-s2.env"
 
 project="v10"
 base_dir="/g/data/v10/work/s2_c3_ard"
@@ -25,14 +25,14 @@ scene_limit="--scene-limit 10000"
 #days_to_exclude="--days-to-exclude '[\"2016-01-01:2022-07-01\"]'"
 #days_to_exclude="--days-to-exclude '[\"2016-11-01:2024-01-31\"]'"
 #days_to_exclude="--days-to-exclude '[\"2016-11-01:2023-12-31\"]'"
-#days_to_exclude="--days-to-exclude '[\"2015-07-01:2016-10-31\",\"2022-08-31:2023-09-01\"]'"
+days_to_exclude="--days-to-exclude '[\"2015-07-01:2016-10-31\",\"2022-01-01:2023-09-01\"]'"
 #days_to_exclude="--days-to-exclude '[\"2015-07-01:2022-08-31\",\"2022-10-01:2023-09-01\"]'"
 #days_to_exclude="--days-to-exclude '[\"2015-07-01:2016-10-31\",\"2022-08-31:2023-09-01\"]'"
 #days_to_exclude="--days-to-exclude '[\"2015-07-01:2016-10-31\",\"2017-01-01:2023-09-01\"]'"
 #days_to_exclude="--days-to-exclude '[\"2015-07-01:2016-02-28\",\"2016-11-01:2023-09-01\"]'"
 #days_to_exclude="--days-to-exclude '[\"2015-01-01:2015-07-31\",\"2015-12-01:2023-09-01\"]'"
 #days_to_exclude="--days-to-exclude '[\"2015-01-01:2015-07-31\",\"2016-11-01:2023-09-01\"]'"
-days_to_exclude="--days-to-exclude '[\"2015-01-01:2022-08-31\"]'"
+# days_to_exclude="--days-to-exclude '[\"2015-01-01:2022-08-31\"]'"
 #days_to_exclude="--days-to-exclude '[\"2015-01-01:2015-12-31\",\"2017-01-01:2029-09-01\"]'"
 #days_to_exclude="--days-to-exclude '[\"2017-01-01:2029-09-01\"]'"
 
@@ -41,8 +41,7 @@ days_to_exclude="--days-to-exclude '[\"2015-01-01:2022-08-31\"]'"
 
 run_ard_arg="--run-ard"
 # run_ard_arg=" "
-index_arg="--index-datacube-env /g/data/v10/projects/c3_ard/dea-ard-scene-select/scripts/prod/ard_env/index-datacube.env"
-
+index_arg:"--index-datacube-env /g/data/v10/work/landsat_downloads/landsat-downloader/config/dass-index-datacube.env"
 module_ass="ard-scene-select-py3-dea/20230330"
 pkgdir="/g/data/ka08/ga/"
 
