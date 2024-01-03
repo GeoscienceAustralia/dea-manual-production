@@ -41,7 +41,7 @@ days_to_exclude="--days-to-exclude '[\"2015-07-01:2016-10-31\",\"2022-01-01:2023
 
 run_ard_arg="--run-ard"
 # run_ard_arg=" "
-index_arg:"--index-datacube-env /g/data/v10/work/landsat_downloads/landsat-downloader/config/dass-index-datacube.env"
+index_arg="--index-datacube-env /g/data/v10/work/landsat_downloads/landsat-downloader/config/dass-index-datacube.env"
 module_ass="ard-scene-select-py3-dea/20230330"
 pkgdir="/g/data/ka08/ga/"
 
